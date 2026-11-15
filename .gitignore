@@ -2,3 +2,8 @@
 /.claude/
 __pycache__/
 *.py[cod]
+
+# makepkg
+/src/
+/pkg/
+/*.pkg.tar.*

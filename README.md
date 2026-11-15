@@ -193,3 +193,24 @@ Methodology and the discovery process behind LFN belong to **Maple Circuit**
 ([notes](https://maplecircuit.dev/lfn/linux-from-nothing.html),
 [playlist](https://www.youtube.com/playlist?list=PLkoRSCZZILDO-YU9Ct-KeVEW71hzeZJu7)).
 `LFN-2.md` is the Arch/zsh/virtio rework this implements.
+
+## Install
+
+[![nix](https://github.com/Szmelc-INC/Linux-From-Something/actions/workflows/nix.yml/badge.svg)](https://github.com/Szmelc-INC/Linux-From-Something/actions/workflows/nix.yml)
+
+**Arch Linux** via [SAUR](https://github.com/Szmelc-INC/SAUR):
+
+```sh
+curl -fsSL https://szmelc-inc.github.io/SAUR/add | sudo bash   # once: adds [saur] to pacman.conf
+sudo pacman -S lfn-git
+```
+
+**Nix**:
+
+```sh
+nix run github:Szmelc-INC/Linux-From-Something
+nix profile install github:Szmelc-INC/Linux-From-Something
+nix develop          # dev shell inside a clone
+```
+
+Then run `lfn --help`.
